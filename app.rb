@@ -1,6 +1,7 @@
 class RestfulControllerApp < Sinatra::Base
   get "/" do  
-    erb "embeded Ruby"
+    @games = ["SmashBox","GalacticMac","Bandit"]
+    erb :games
   end
 
 
