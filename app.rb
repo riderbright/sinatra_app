@@ -1,5 +1,9 @@
 class FoodsApp < Sinatra::Base
-  get "/" do  
-    p "JAVA READY"
+  get "/" do 
+    "JavsSkillz" 
+  end    
+  get '/foods' do
+    @foods = Food.all
+    erb :"index"
   end
 end
