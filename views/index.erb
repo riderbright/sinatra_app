@@ -1,0 +1,12 @@
+<ul>
+<% @foods.each do | food | %>
+    <li>
+        <p>
+        <%= food.id %>
+        <strong>"<%= food.title %>", 
+        by <%= food.order %></strong>, 
+        <%= food.table_number %></p>
+    </li>
+<% end %>
+</ul>
+<a href="/foods/new">Create new</a>
