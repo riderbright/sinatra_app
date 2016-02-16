@@ -29,5 +29,5 @@ end
 post '/foods/:id' do
     @food = Food.find(params[:id])
     @food.create
-    redirect("/foods")
+    redirect("/foods/")
 end
