@@ -15,7 +15,7 @@ class FoodsApp < Sinatra::Base
 
   post '/foods' do
       p params  
-      @food = Food.create(params[:song])
+      @food = Food.create(params[:id])
       @food.save
       redirect "/"
   end
@@ -26,5 +26,8 @@ class FoodsApp < Sinatra::Base
       @food.title  
   end
 end
-
-
+post '/foods/:id' do
+    @food = Food.find(params[:id])
+    @food.create
+    redirect("/foods")
+end
