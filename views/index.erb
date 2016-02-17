@@ -1,16 +1,15 @@
 <ul>
 <% @foods.each do | food | %>
-    <li>
+    <li class="list">
        <p>
-       	<%= food.id %>
-        <strong><%= food.title %>
-        <br><%= food.order %></strong> 
-        <br><%= food.table_number %>
+		
+		<strong><%= food.title %></strong>
+        <br>
+        <b>course: </b><%= food.order %>
+        <br>
+        <b>table: </b><%= food.table_number %>	
        </p>
     </li>
-
-
-
 <% end %>
 <a href="/foods/new">New Order</a>
 </ul>

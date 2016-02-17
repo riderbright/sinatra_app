@@ -25,6 +25,7 @@ class FoodsApp < Sinatra::Base
       @food = Food.find(params[:id])
       @food.title  
   end
+
 end
 post '/foods/:id' do
     @food = Food.find(params[:id])
